@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+
+
+<hibernate-configuration>
+    <session-factory>
+        <!--DATABASE CONNECTION SETTINGS -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://ec2-50-16-197-244.compute-1.amazonaws.com:5432/dh68dh1jdh4f8</property>
+        <property name="connection.username">fstxjvtakqmyhc</property>
+        <property name="connection.password">bf0401fbbd7ea6f9280bcd1c24c8c11f207cb2c964ef952496cd99efdb7c715d</property>
+        
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property> <!-- DB Dialect -->
+        <property name="show_sql">true</property> <!-- Show SQL in console -->
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <!--NOME DAS CLASSES-->
+        <mapping class="com.wtech.Model.Usuario"/>
+        <mapping class="com.wtech.Model.Ocorrencia"/>
+        <mapping class="com.wtech.Model.TipoOcorrencia"/>
+        <mapping class="com.wtech.Model.TipoTomPele"/>
+        <mapping class="com.wtech.Model.TipoEstaturaAgressor"/>
+        <mapping class="com.wtech.Model.TipoColoracaoCabelo"/>
+        <mapping class="com.wtech.Model.Avaliacao"/>
+    </session-factory>
+</hibernate-configuration>
